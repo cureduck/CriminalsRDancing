@@ -1,4 +1,5 @@
 import players
+from cards import card
 from players import player
 
 class table():
@@ -11,6 +12,14 @@ class table():
             p.num=i
             i+=1
             p.nums=c
+
+    def updata(self,data):
+        i=0
+        for p in self._players:
+            temp=[]
+            for name in data[i]:
+                temp.append(card(name))
+            p.handcard=temp
 
 
 
